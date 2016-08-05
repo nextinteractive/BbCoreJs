@@ -141,6 +141,7 @@ define(
 
                     self.ContentSaveManager.save().done(function () {
                         self.repository.getDrafts().done(function (drafts) {
+                            Core.Mediator.publish('on:draft:prerender', drafts);
                             var config = {
                                     items: DraftManager.computeDraft(drafts),
                                     title: self.config.title,
