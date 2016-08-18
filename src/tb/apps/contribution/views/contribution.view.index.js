@@ -125,6 +125,8 @@ define(
              * Call service `save` into main application
              */
             manageSave: function () {
+                var buttonValidate = $('button.bundle-toolbar-global-validate')[0];
+                buttonValidate.disabled = true;
                 Core.ApplicationManager.invokeService('main.main.save');
             },
 
