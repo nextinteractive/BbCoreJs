@@ -235,14 +235,19 @@ define(
                     });
                 } else {
 
+                    var buttonValidate = $('button.bundle-toolbar-global-validate')[0];
                     if (nbContents > 0) {
                         SaveManager.save().done(function () {
                             notify.success(nbContents + ' ' + translator.translate('content_saved_sentence' + ((nbContents > 1) ? '_plural' : '')));
-                            dfd.resolve(nbContents);
+                            dfd.resolve(nbContents).then(function () {
+                                buttonValidate.disabled = false;
+                            });
                         });
                     } else {
                         notify.warning(translator.translate('no_content_save'));
-                        dfd.resolve();
+                        dfd.resolve().then(function () {
+                            buttonValidate.disabled = false;
+                        });
                     }
 
                 }
