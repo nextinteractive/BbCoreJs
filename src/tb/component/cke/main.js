@@ -320,7 +320,7 @@ define(
                 var editor = event.editor;
                 this.editors.push(editor);
 
-                editor.focus();
+                //editor.focus();
 
                 editor.on("blur", jQuery.proxy(this.handleContentEdition, this));
             },
