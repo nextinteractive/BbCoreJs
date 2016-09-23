@@ -48,6 +48,14 @@ define(
                         self.push(object);
                     }
                 });
+                
+                var update_date = 0;
+                
+                if (jQuery('#update_date:checked').val() != undefined) {
+                    update_date = 1;
+                }
+
+                this.dataToSave.push({update_date: update_date});
 
                 return this.dataToSave;
             },
