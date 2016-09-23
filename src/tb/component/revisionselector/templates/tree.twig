@@ -18,7 +18,18 @@
             {{ items }}
         </ul>
     </div>
+    <div class="update_date_page" style="float: right;">
+        <input id="update_date" type="checkbox" name="update_date" style="width: 12px; height: 12px;" />
+        <label for="update_date" style="font-size: 15px; color: #363636; font-weight: bold;">Mettre à jour la date de publication à l'enregistrement</label>
+    </div>
 </div>
 {% else %}
 <p>{{ noContentMsg }}</p>
 {% endif %}
+
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+    Option one is this and that—be sure to include why it's great
+  </label>
+</div>
