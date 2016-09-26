@@ -269,6 +269,7 @@ define(
 
                 var translator = req('component!translator'),
                     config = {
+                        displayUpdateDate: false,
                         popinTitle: translator.translate('cancel_confirmation'),
                         noContentMsg: translator.translate('no_content_cancel'),
                         questionMsg: translator.translate('cancel_content_cancel_modifications'),
@@ -305,6 +306,7 @@ define(
 
                 var translator = req('component!translator'),
                     config = {
+                        displayUpdateDate: true,
                         popinTitle: translator.translate('validation_confirmation'),
                         noContentMsg: translator.translate('no_content_validate'),
                         noteMsg: translator.translate('validation_popin_note') + '<br />' + translator.translate('validation_unselect_note'),

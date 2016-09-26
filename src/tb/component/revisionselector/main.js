@@ -148,7 +148,8 @@ define(
                                     noteMsg: self.config.noteMsg,
                                     noContentMsg: self.config.noContentMsg,
                                     questionMsg: self.config.questionMsg,
-                                    treeTemplate: treeTemplate
+                                    treeTemplate: treeTemplate,
+                                    displayUpdateDate: self.config.displayUpdateDate
                                 },
                                 buttonName = 'Ok';
 

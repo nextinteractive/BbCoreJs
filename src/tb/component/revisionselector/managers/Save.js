@@ -19,10 +19,11 @@
 
 define(
     [
+        'Core',
         'jquery',
         'jsclass'
     ],
-    function (jQuery) {
+    function (Core, jQuery) {
 
         'use strict';
 
@@ -55,7 +56,7 @@ define(
                     update_date = 1;
                 }
 
-                this.dataToSave.push({update_date: update_date});
+                this.dataToSave.push({update_date: update_date, page_uid: Core.get('page.uid')});
 
                 return this.dataToSave;
             },
