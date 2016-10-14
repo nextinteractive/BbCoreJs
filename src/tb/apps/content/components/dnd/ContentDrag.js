@@ -59,6 +59,15 @@ define(
              * @param {Object} event
              */
             onDragStart: function (event) {
+                // save selected contents
+                jQuery('.bb-content-selected > .bb-content').each(function() {
+                    var element = jQuery('.bb-content-selected > .bb-content'),
+                        data = element.html();
+
+                    content = ContentManager.getContentByNode(element);
+                    content.set('value', data);
+                });
+                
                 event.stopPropagation();
 
                 var target = jQuery(event.target),
