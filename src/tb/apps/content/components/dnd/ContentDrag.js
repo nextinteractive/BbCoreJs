@@ -59,13 +59,16 @@ define(
              * @param {Object} event
              */
             onDragStart: function (event) {
-                // save selected contents
+                // save selected contents (only text elements)
                 jQuery('.bb-content-selected > .bb-content').each(function() {
-                    var element = jQuery('.bb-content-selected > .bb-content'),
+                    var element = jQuery(this),
                         data = element.html();
 
                     content = ContentManager.getContentByNode(element);
-                    content.set('value', data);
+
+                    if (content.type == 'Element/Text') {
+                        content.set('value', data);
+                    }
                 });
                 
                 event.stopPropagation();
